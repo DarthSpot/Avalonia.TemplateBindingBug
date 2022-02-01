@@ -1,0 +1,30 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:models="clr-namespace:BindingDataContextTest.Models">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <!-- Add Controls for Previewer Here -->
+        </Border>
+    </Design.PreviewWith>
+
+    <Style Selector="models|BindingTestControl">
+        <Setter Property="Template">
+            <ControlTemplate TargetType="models:BindingTestControl">
+                <StackPanel>
+                    <TextBlock Text="{TemplateBinding StringDirect}" />
+                    <TextBlock Text="{TemplateBinding StringStyled}" />
+                </StackPanel>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+    <Style Selector="models|BindingTestControlWithDataContext">
+        <Setter Property="Template">
+            <ControlTemplate TargetType="models:BindingTestControlWithDataContext">
+                <StackPanel>
+                    <TextBlock Text="{TemplateBinding StringDirect}" />
+                    <TextBlock Text="{TemplateBinding StringStyled}" />
+                </StackPanel>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>
